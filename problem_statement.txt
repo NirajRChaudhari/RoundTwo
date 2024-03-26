@@ -1,0 +1,21 @@
+How about creating a real-time collaborative document editor using Node.js, somewhat similar to Google Docs? This task will challenge you in areas such as handling concurrency, real-time data synchronization, operational transformations, and efficient data storage and retrieval. 
+### Task Overview:
+**Objective**: Build a real-time collaborative text editor where multiple users can edit a document simultaneously, and all changes are reflected in real-time to all participants.
+**Key Features**:
+1. **Real-Time Collaboration**: Any changes made by a user should be instantly visible to all other users viewing the document.
+2. **Operational Transformation**: Implement a way to handle concurrent edits gracefully, ensuring document consistency without losing any user's input.
+3. **Persistence**: Changes should be saved to a database so that documents can be retrieved and edited later.
+4. **User Authentication**: Implement a simple user authentication system to identify different users.
+5. **Document Management**: Users should be able to create new documents, open existing ones, and list all documents they have access to.
+### Technical Specifications:
+1. **Backend**: Use Node.js with Express for handling HTTP requests.
+2. **Real-time Communication**: Use WebSocket (or Socket.IO for ease of use) for real-time bi-directional communication between clients and the server.
+3. **Operational Transformation (OT) Library**: You might need to use or adapt an existing OT library to manage concurrent document edits. 
+4. **Database**: Choose MongoDB or PostgreSQL for storing user data and document content. Consider using a versioning system for document edits.
+5. **Authentication**: Implement JWT-based authentication to manage user sessions and access control.
+6. **Frontend (Optional)**: While the main task is focused on the backend, having a frontend would be necessary to demonstrate the real-time collaborative editing feature. You can use a  HTML/CSS/JS setup or a frontend framework like React.
+### Challenges:
+- **Concurrency**: Designing a system that can handle multiple users editing the same part of a document simultaneously without conflicts or loss of data.
+- **Efficiency**: Ensuring the system is efficient enough to propagate changes in real-time without significant lag or performance degradation, even as the number of concurrent users grows.
+- **Scalability**: Architecting your backend to scale horizontally, allowing for more users and documents by adding more server instances.
+- **Security**: Implementing robust authentication and authorization to prevent unauthorized access to documents.
